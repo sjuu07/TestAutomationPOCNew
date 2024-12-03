@@ -25,28 +25,24 @@ pipeline {
                 junit '**/target/surefire-reports/*.xml'  // For JUnit or TestNG test reports
             }
         }
+
         stage('Publish Reports') {
-    steps {
-        publishHTML(target: [
-            reportDir: 'target/html-report',
-            reportFiles: 'index.html',
-            reportName: 'Test Automation Report'
-        ])
-    }
-}
+            steps {
+                publishHTML(target: [
+                    reportDir: 'target/html-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Test Automation Report'
+                ])
+            }
+        }
     }
 
     post {
         always {
             echo 'Pipeline completed!'
-            mail to: 'juhimarysaji15@gmail.com',
-                 subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
-                 body: "Something went wrong. Check Jenkins for details."
         }
         failure {
-            mail to: 'juhimarysaji15@gmail.com',
-                 subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
-                 body: "Something went wrong. Check Jenkins for details."
+            echo 'Pipeline failed!'
         }
     }
 }

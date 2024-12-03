@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import Base.DriverManager;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -37,10 +36,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 		String browser=System.getProperty("browser",prop.getProperty("browser"));
 		//DriverManager.setDriver(browser);
         driver = DriverManager.getDriver(browser);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 	}
 	
-	@AfterSuite
+	//@AfterSuite
 	public void closeBrowser() {
 		if(driver!=null)
 		DriverManager.quitDriver();

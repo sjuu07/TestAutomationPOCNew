@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\juhim\AppData\Local\Temp\testng-eclipse--689369074\testng-customsuite.xml</span>
+                    <span>C:\Users\juhim\AppData\Local\Temp\testng-eclipse-1112577416\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="CucumberExecutor.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Verify that a new user log in, and place an order&quot;, &quot;Navigate to a URL&quot;)">runScenario("Verify that a new user log in, and place an order", "Navigate to a URL")</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="CucumberExecutor.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Search product and place an order&quot;, &quot;Advantage Demo online shopping&quot;)">runScenario("Search product and place an order", "Advantage Demo online shopping")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -126,22 +126,36 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="runScenario(&quot;Verify that a new user log in, and place an order&quot;, &quot;Navigate to a URL&quot;)">
-                  </a> <!-- runScenario("Verify that a new user log in, and place an order", "Navigate to a URL") -->
+                  <a name="runScenario(&quot;Search product and place an order&quot;, &quot;Advantage Demo online shopping&quot;)">
+                  </a> <!-- runScenario("Search product and place an order", "Advantage Demo online shopping") -->
                   <span class="method-name">runScenario</span>
-                  <span class="parameters">("Verify that a new user log in, and place an order","Navigate to a URL")</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//span[contains(@class,&apos;hi-user&apos;)])[last()] (tried for 20 second(s) with 500 milliseconds interval)
+                  <span class="parameters">("Search product and place an order","Advantage Demo online shopping")</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: disconnected: not connected to DevTools
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.86)
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.86 (ee338c5c68e9..., userDataDir: C:\Users\juhim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62023}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62023/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 911f061f21916ef877f2bcef7cac25a5
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at Utils.ElementActions.performVisibleWait(ElementActions.java:20)
-	at PageObjects.LoginPage.verifyTitle(LoginPage.java:34)
-	at StepDefinition.StepDefs.thePageTitleShouldContain(StepDefs.java:76)
-	at ✽.verify the page title(file:///C:/Users/juhim/eclipse-workspace/TestFramework/src/test/resources/Features/Launch.feature:8)
+Command: [57bb76f6ef39a57f1306101cc375040a, findElement {using=xpath, value=//*[@translate=&apos;Thank_you_for_buying_with_Advantage&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.86, chrome: {chromedriverVersion: 131.0.6778.86 (ee338c5c68e9..., userDataDir: C:\Users\juhim\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56492}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56492/devtoo..., se:cdpVersion: 131.0.6778.86, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 57bb76f6ef39a57f1306101cc375040a
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+	at PageObjects.AD_ProductPage.placeOrder(AD_ProductPage.java:62)
+	at StepDefinition.StepDefs.order_is_placed_successfully(StepDefs.java:94)
+	at ✽.order is placed successfully(file:///C:/Users/juhim/eclipse-workspace/TestFramework/src/test/resources/Features/Launch.feature:15)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -153,7 +167,7 @@ Session ID: 911f061f21916ef877f2bcef7cac25a5
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\juhim\AppData\Local\Temp\testng-eclipse--689369074\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\juhim\AppData\Local\Temp\testng-eclipse-1112577416\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -214,12 +228,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'CucumberExecutor.TestRunner')
-data.setCell(0, 3, 30364);
+data.setCell(0, 3, 4074577);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 seconds</span>
+              <span class="suite-total-time">Total running time: 1 hours</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -247,27 +261,23 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">CucumberExecutor.TestRunner</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUpClass(org.testng.TestRunner@46e6458d)</span>
+                <span class="method-name">setUpClass(org.testng.TestRunner@5602e540)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1013 ms</span>
+                <span class="method-start">931 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">runScenario("Verify that a new user log in, and place an order", "Navigate to a URL")</span>
-                <span class="method-start">3511 ms</span>
+                <span class="method-name">runScenario("Search product and place an order", "Advantage Demo online shopping")</span>
+                <span class="method-start">3554 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">33887 ms</span>
+                <span class="method-start">4078146 ms</span>
               </div> <!-- configuration-class after -->
-              <div class="configuration-suite after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">34416 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

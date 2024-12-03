@@ -20,8 +20,6 @@ public class LoginPage {
 	}
 
 	public void setLogin() throws InterruptedException {
-		
-
 		ElementActions.dynamicClick(driver, By.xpath(menu));
 		ElementActions.sendData(driver, By.xpath(username), DBManager.testData.get("username"));
 		ElementActions.sendData(driver, By.xpath(password), DBManager.testData.get("password"));
@@ -30,9 +28,8 @@ public class LoginPage {
 	}
 
 	public String verifyTitle(String username) {
-		
 		ElementActions.performVisibleWait(driver, By.xpath(title));
-		Assert.assertEquals(driver.findElement(By.xpath(title)).getText(), username+"1");
+		Assert.assertEquals(driver.findElement(By.xpath(title)).getText(), username);
 		return username;
 
 	}

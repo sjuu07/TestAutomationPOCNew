@@ -16,7 +16,7 @@ pipeline {
 
         stage('Publish Test Results') {
             steps {
-               publishTestNGResults testResults: '**/target/surefire-reports/testng-results.xml'   // For TestNG test reports
+               publishTestNGResults testResults: '**/target/test-output/testng-results.xml'   // For TestNG test reports
 
             }
         }

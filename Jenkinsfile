@@ -2,13 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'master', url: 'https://github.com/sjuu07/TestAutomationPOCNew.git'
-            }
-        }
-
-        stage('Build') {
+         stage('Build') {
             steps {
                 bat 'mvn clean compile'
             }
@@ -22,7 +16,8 @@ pipeline {
 
         stage('Publish Test Results') {
             steps {
-                junit '**/target/surefire-reports/*.xml'  // For JUnit or TestNG test reports
+               publishTestNGResults testResults: '**/target/surefire-reports/testng-results.xml'   // For TestNG test reports
+
             }
         }
 
